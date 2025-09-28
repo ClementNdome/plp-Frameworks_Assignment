@@ -9,7 +9,7 @@ st.write("Simple exploration of COVID-19 research papers (metadata.csv)")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('../data/metadata.csv', low_memory=False)
+    df = pd.read_csv('data/metadata.csv', low_memory=False)
     df['publish_time'] = pd.to_datetime(df['publish_time'], errors='coerce')
     df['year'] = df['publish_time'].dt.year
     return df.dropna(subset=['year','title'])
@@ -32,6 +32,7 @@ sns.barplot(x=year_counts.index, y=year_counts.values, color='skyblue', ax=ax)
 ax.set_xlabel("Year")
 ax.set_ylabel("Number of Papers")
 st.pyplot(fig)
+# st.plt.savefig('Most Frequent Words111.jpg')
 
 # --- Visualization 2: Top Journals ---
 st.subheader("Top Journals")
