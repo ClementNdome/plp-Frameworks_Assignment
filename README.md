@@ -35,31 +35,39 @@ We use the **CORD-19 metadata.csv** file, which contains:
 - The dataset is large, so it is **not included in this repository**.  
 - After downloading, place the file in a folder named `data/` inside the project root:  
 
-Installation
+### Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/<your-username>/Frameworks_Assignment.git
 cd Frameworks_Assignment
+```
 
 
 Create a virtual environment (recommended):
 
 python -m venv venv
+```bash
 source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
 
 
 Install required packages:
 
+```python
 pip install -r requirements.txt
+```
 
 🚀 Usage
 1. Explore with Jupyter Notebook
 jupyter notebook notebooks/cord19_exploration.ipynb
 
 2. Run the Streamlit App
+```bash
 cd app
 streamlit run streamlit_app.py
+```
 
 
 Then open your browser at the provided local URL (usually http://localhost:8501/).
